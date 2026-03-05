@@ -1,0 +1,23 @@
+{
+  "name": "@mreact/dom",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client.js",
+      "types": "./dist/client.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts src/client.ts --format esm --dts"
+  },
+  "dependencies": {
+    "@mreact/core": "workspace:*"
+  }
+}

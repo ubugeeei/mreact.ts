@@ -1,0 +1,23 @@
+{
+  "name": "@mreact/tsx",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./vite-plugin": {
+      "import": "./dist/vite-plugin.js",
+      "types": "./dist/vite-plugin.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts src/vite-plugin.ts --format esm --dts"
+  },
+  "dependencies": {
+    "@mreact/core": "workspace:*"
+  }
+}

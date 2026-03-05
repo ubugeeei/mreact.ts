@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["vitest/globals"],
+    "paths": {
+      "@mreact/core": ["./packages/core/src/index.ts"],
+      "@mreact/dom": ["./packages/dom/src/index.ts"],
+      "@mreact/dom/client": ["./packages/dom/src/client.ts"],
+      "@mreact/server": ["./packages/server/src/index.ts"],
+      "@mreact/tsx": ["./packages/tsx/src/index.ts"]
+    }
+  },
+  "include": ["packages/*/src", "examples", "tests"],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/dom" },
+    { "path": "./packages/server" },
+    { "path": "./packages/tsx" }
+  ]
+}

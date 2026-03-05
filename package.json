@@ -1,0 +1,28 @@
+{
+  "name": "mreact-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "MReact.ts — Monadic React in TypeScript (monorepo)",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "oxlint --type-aware --type-check",
+    "fmt": "oxfmt --write packages examples",
+    "dev": "vite",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "ubugeeei <ubuge1122@gmail.com>",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.1",
+  "devDependencies": {
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "tsdown": "^0.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  }
+}
